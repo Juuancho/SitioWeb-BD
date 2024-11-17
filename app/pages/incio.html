@@ -1,0 +1,210 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Galileo Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7eef4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#0d151c]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-[#0d151c] text-lg font-bold leading-tight tracking-[-0.015em]">Edulab</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#0d151c] text-sm font-medium leading-normal" href="#">Dashboard</a>
+              <a class="text-[#0d151c] text-sm font-medium leading-normal" href="#">Courses</a>
+              <a class="text-[#0d151c] text-sm font-medium leading-normal" href="#">Projects</a>
+              <a class="text-[#0d151c] text-sm font-medium leading-normal" href="#">Members</a>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2094f3] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">New Course</span>
+              </button>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7eef4] text-[#0d151c] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Upgrade Now</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#0d151c] tracking-light text-[32px] font-bold leading-tight min-w-72">Courses</p>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e7eef4] text-[#0d151c] text-sm font-medium leading-normal"
+              >
+                <span class="truncate">New Course</span>
+              </button>
+            </div>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-xl border border-[#cedde8] bg-slate-50">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-slate-50">
+                      <th class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 px-4 py-3 text-left text-[#0d151c] w-[400px] text-sm font-medium leading-normal">ID</th>
+                      <th class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 px-4 py-3 text-left text-[#0d151c] w-[400px] text-sm font-medium leading-normal">Name</th>
+                      <th class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 px-4 py-3 text-left text-[#0d151c] w-[400px] text-sm font-medium leading-normal">
+                        Description
+                      </th>
+                      <th class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 px-4 py-3 text-left text-[#0d151c] w-[400px] text-sm font-medium leading-normal">
+                        Teacher ID
+                      </th>
+                      <th
+                        class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 px-4 py-3 text-left text-[#0d151c] w-60 text-[#49779c] text-sm font-medium leading-normal"
+                      ></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#cedde8]">
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">CS101</td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#0d151c] text-sm font-normal leading-normal">
+                        Intro to Computer Science
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        Learn the basics of programming, algorithms, and data structures in Python
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        teacher_1
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 h-[72px] px-4 py-2 w-60 text-[#49779c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        Edit
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedde8]">
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">PHY101</td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#0d151c] text-sm font-normal leading-normal">
+                        Physics 101
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        Classical mechanics, thermodynamics, electricity and magnetism
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        teacher_2
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 h-[72px] px-4 py-2 w-60 text-[#49779c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        Edit
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedde8]">
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">ENG101</td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#0d151c] text-sm font-normal leading-normal">
+                        English Composition
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        Develop your writing skills, vocabulary, and grammar
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        teacher_3
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 h-[72px] px-4 py-2 w-60 text-[#49779c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        Edit
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedde8]">
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">MTH101</td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#0d151c] text-sm font-normal leading-normal">
+                        College Algebra
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        Functions, polynomials, exponential and logarithmic equations
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        teacher_4
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 h-[72px] px-4 py-2 w-60 text-[#49779c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        Edit
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedde8]">
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">BIO101</td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#0d151c] text-sm font-normal leading-normal">
+                        Introduction to Biology
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        Evolution, genetics, cellular biology, and ecology
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        teacher_5
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 h-[72px] px-4 py-2 w-60 text-[#49779c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        Edit
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedde8]">
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">HIS101</td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#0d151c] text-sm font-normal leading-normal">
+                        World History
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        Ancient civilizations, the Middle Ages, Renaissance, and modern era
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        teacher_6
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 h-[72px] px-4 py-2 w-60 text-[#49779c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        Edit
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedde8]">
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">ART101</td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#0d151c] text-sm font-normal leading-normal">
+                        Fundamentals of Drawing
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        Still life, figure drawing, perspective, and shading techniques
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480 h-[72px] px-4 py-2 w-[400px] text-[#49779c] text-sm font-normal leading-normal">
+                        teacher_7
+                      </td>
+                      <td class="table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600 h-[72px] px-4 py-2 w-60 text-[#49779c] text-sm font-bold leading-normal tracking-[0.015em]">
+                        Edit
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-120{display: none;}}
+                @container(max-width:240px){.table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-240{display: none;}}
+                @container(max-width:360px){.table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-360{display: none;}}
+                @container(max-width:480px){.table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-480{display: none;}}
+                @container(max-width:600px){.table-8af243c7-8a01-4294-9d11-f6fd6fe4a32a-column-600{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

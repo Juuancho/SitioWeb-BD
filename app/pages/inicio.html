@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Tablas</title>
+  <script src="funciones.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de Navegación -->
+  <nav>
+    <ul>
+      <li><a href="#estudiantes">Listado de estudiantes, profesores y cursos</a></li>
+      <li><a href="#modulo">Módulo de Matriculación</a></li>
+      <li><a href="#reporte">Reporte de Matrículas</a></li>
+    </ul>
+  </nav>
+
+  <h1 id="estudiantes">Listado de Estudiantes</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody id="students-table-body">
+      <!-- Los datos se agregarán dinámicamente aquí -->
+    </tbody>
+  </table>
+
+  <h2>Listado de Profesores</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody id="teachers-table-body">
+      <!-- Los datos se agregarán dinámicamente aquí -->
+    </tbody>
+  </table>
+
+  <h2>Listado de Cursos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>course_name</th>
+        <th>course_descrption</th>
+        <th>teacher_id</th>
+      </tr>
+    </thead>
+    <tbody id="courses-table-body">
+      <!-- Los datos se agregarán dinámicamente aquí -->
+    </tbody>
+  </table>
+
+  <!-- Módulo de Matriculación -->
+  <section id="modulo">
+    <h2>Módulo de Matriculación</h2>
+    <form id="enrollment-form">
+      <label for="student-select">Seleccione el estudiante:</label>
+      <select id="student-select" name="student" required>
+        <option value="">--Seleccione un estudiante--</option>
+      </select>
+
+      <label for="courses-select">Seleccione los cursos:</label>
+      <select id="courses-select" name="courses" multiple required>
+        <!-- Los cursos se agregarán dinámicamente aquí -->
+      </select>
+
+      <button type="submit">Matricular</button>
+    </form>
+  </section>
+
+  <!-- Tabla de matriculaciones -->
+  <section id="reporte">
+    <h2>Reporte de Matrículas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID Estudiante</th>
+          <th>Nombre Estudiante</th>
+          <th>Curso(s)</th>
+        </tr>
+      </thead>
+      <tbody id="enrollments-table-body">
+        <!-- Los datos de matriculaciones se agregarán aquí -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Consultamos los estudiantes matriculados dependiendo del profesor-->
+  <div>
+    <h2>Consultar Estudiantes Matriculados</h2>
+    <label for="teacher-select">Selecciona tu nombre:</label>
+    <select id="teacher-select">
+      <option value="">Selecciona un profesor...</option>
+    </select>
+    <button id="fetch-enrollments">Consultar</button>
+  
+    <table id="enrollments-table" border="1">
+      <thead>
+        <tr>
+          <th>Curso</th>
+          <th>Profesor</th>
+          <th>Estudiante</th>
+          <th>Fecha Matrícula</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+
+  <script src="funciones.js"></script>
+  <script src="Enrollments.js"></script>
+  <script src="views.js"></script>
+
+</body>
+</html>

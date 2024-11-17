@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+  padding-top: 60px;
+  background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+}
+
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Table Styles */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table thead {
+  background-color: #2980b9;
+  color: white;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: left;
+}
+
+table th {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #dff6ff;
+  transition: background-color 0.3s ease;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Add a subtle hover effect on rows */
+table tbody tr:hover td {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  table {
+      width: 100%;
+  }
+  
+  table thead {
+      display: none;
+  }
+  
+  table tbody td {
+      display: block;
+      text-align: right;
+      padding: 10px;
+      position: relative;
+  }
+  
+  table tbody td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+  
+  table tbody tr:hover td {
+      background-color: #fff;
+      font-weight: normal;
+      color: #333;
+  }
+}
+
+/* Styling for the sections */
+.section {
+  margin: 40px 0;
+}
+
+/* Soft box-shadow for the table containers */
+table {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de Navegación */
+nav {
+  background-color: #2980b9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #1a5e85;
+  border-radius: 5px;
+}
+
+/* Ajuste del contenido para evitar que se superponga con la barra */
+body {
+  padding-top: 60px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+}
+
+body {
+  padding-top: 60px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilos para el formulario de matriculación */
+form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 30px auto;
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+
+form button:hover {
+  background-color: #1a5e85;
+}
+
+/* Estilo de la tabla de matriculaciones */
+#reporte table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+#reporte th, #reporte td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#reporte th {
+  background-color: #2980b9;
+  color: white;
+}
+
+#reporte tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
