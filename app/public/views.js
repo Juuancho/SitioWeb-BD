@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const teacherSelect = document.getElementById('teacher-select');
     const enrollmentsTableBody = document.getElementById('enrollments-table').querySelector('tbody');
   
-    // Cargar profesores en el dropdown
     fetch('/teacherss')
       .then(response => response.json())
       .then(data => {
@@ -58,5 +57,103 @@ document.addEventListener('DOMContentLoaded', () => {
           alert('No se pudo obtener la información');
         });
     });
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const tableBody = document.getElementById('student-count-table').querySelector('tbody');
+  
+    const loadStudentCount = () => {
+
+      fetch('/courses/student-count')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error al obtener los datos');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Llenar la tabla con los resultados
+          data.forEach(course => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${course.course_name}</td>
+              <td>${course.total_students}</td>
+            `;
+            tableBody.appendChild(row);
+          });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Hubo un error al obtener los datos.');
+        });
+    };
+
+    //Cargamos los datos al cargar la página
+    loadStudentCount();
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const emptyCoursesTableBody = document.getElementById('empty-courses-table').querySelector('tbody');
+  
+    // Función para cargar los cursos vacíos
+    const loadEmptyCourses = () => {
+      fetch('/courses/empty')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error al obtener los cursos vacíos');
+          }
+          return response.json();
+        })
+        .then(data => {
+          emptyCoursesTableBody.innerHTML = '';
+  
+          // Mostramos los cursos vacíos
+          if (data.length === 0) {
+            const row = document.createElement('tr');
+            row.innerHTML= '<td colspan="2">Todos los cursos tienen estudiantes matriculados.</td>';
+            emptyCoursesTableBody.appendChild(row);
+          } else {
+            data.forEach(course => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td>${course.id}</td>
+                <td>${course.course_name}</td>
+              `;
+            emptyCoursesTableBody.appendChild(row);
+            });
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Hubo un error al obtener los cursos vacíos.');
+        });
+    };
+  
+    loadEmptyCourses();
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const averageStudentsElement = document.getElementById('average-students');
+  
+    // Función para cargar el promedio de estudiantes por curso
+    const loadAverageStudents = () => {
+      fetch('/courses/average-students')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error al obtener el promedio'); // Correct the misspelled word 'promedio'
+          }
+          return response.json();
+        })
+        .then(data => {
+          const average = data.average;
+          averageStudentsElement.textContent = `El promedio de estudiantes por curso es: ${average}`;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          averageStudentsElement.textContent = 'No se pudo calcular el promedio.';
+        });
+    };
+  
+    loadAverageStudents();
   });
   

@@ -90,7 +90,7 @@ app.get('/teacherss', async (req, res) => {
   }
 });
 
-//endpoint para consultar la vista de estudiantes en un curso
+//consultar la vista de estudiantes en un curso
 app.get('/enrollments/teacher/:teacher', async (req, res) => {
   const teacherName = req.params.teacher;
   try {
@@ -105,7 +105,60 @@ app.get('/enrollments/teacher/:teacher', async (req, res) => {
   }
 });
 
+//Aquí podemos listar los estudiantes matriculados en cada curso
+app.get('/courses/student-count', async (req, res) => {
+  try {
+    const [rows] = await db.query(`
+      SELECT c.course_name, COUNT(e.student_id) AS total_students
+      FROM Courses c
+      LEFT JOIN Enrollments e ON c.id = e.course_id
+      GROUP BY c.course_name;`
+      );
+    res.status(200).json(rows); // Enviar los datos obtenidos como respuesta
+  } catch (error) {
+    console.error('Error al consultar el conteo de estudiantes:', error);
+    res.status(500).json({ message: 'Error al obtener el conteo de estudiantes' });
+  }
+});
 
+//Subconsulta para mostrar cursos vacios o sin estudiantes sin matricular
+app.get('/courses/empty', async (req, res) => {
+  try {
+    const [rows] = await db.query(`
+      SELECT id, course_name 
+      FROM Courses 
+      WHERE id NOT IN (
+          SELECT DISTINCT course_id 
+          FROM Enrollments
+      );
+    `);
+    res.status(200).json(rows);
+  } catch (error) {
+    console.error('Error al consultar cursos sin estudiantes:', error);
+    res.status(500).json({ message: 'Error al obtener los cursos sin estudiantes.' });
+  }
+});
+
+//consulta para promedio de estudiantes en todos los cursos
+app.get('/courses/average-students', async (req, res) => {
+  try {
+    const [rows] = await db.query(`
+      SELECT AVG(student_count) AS average_students_per_course
+      FROM (
+          SELECT COUNT(e.student_id) AS student_count
+          FROM Courses c
+          LEFT JOIN Enrollments e ON c.id = e.course_id
+          GROUP BY c.id
+      ) AS course_student_counts;
+    `);
+
+    const average = rows[0]?.average_students_per_course || 0;
+    res.status(200).json({ average });
+  } catch (error) {
+    console.error('Error al calcular el promedio de estudiantes por curso:', error);
+    res.status(500).json({ message: 'Error al calcular el promedio.' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
